@@ -67,6 +67,12 @@
 	color: #35465d;
 }
 
+.addthis_inline_share_toolbox{
+	
+	margin-top: 50px;
+	text-align: center;
+
+}
 @media screen and (max-width: 600px) {
 	.html {
 		font-size: 10px;
