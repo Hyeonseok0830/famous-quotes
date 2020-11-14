@@ -27,7 +27,9 @@
     integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
     crossorigin="anonymous"></script>
 <script>
-    var jbAry = ['유능한 예술가는 모방하고, 위대한 예술가는 훔친다.', 'Ipsum', 'Dolor'];
+    var jbAry = ['현석이는 천재다.', '돼지고기 감자 짜글이는 현석이가 해야 맛있다.', '제문경은 화장하느라 바쁘다.'];
+    var jbiAry = ['정현석', '바보', '제문경'];
+    //DB화 시키기
 </script>
 
 <body>
@@ -63,15 +65,26 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/SangSangFlowerRoad.woff"
         rel="stylesheet" />
-    <div class="container quote pt-5">
-        <a>“</a>유능한 예술가는 모방하고, 위대한 예술가는 훔친다.<c>”</c>
-        <div class="figure">- <i>파블로 피카소</i></div>
+    <div class="container quote pt-5" onclick="btn()">
+        <img src = "img/left.png" class = "dir" width="50px" height="50px">
         <script>
+            function btn(){
+                //var test = document.getElementById("test");
+                var Random = Math.random();            
+                index= Math.floor(Random * 3);  //3은 배열 갯수 
+                console.log("index = "+index)
+            }
+            
             var jbRandom = Math.random();
-            document.write('<a>' + '“' + '</a>' + jbAry[Math.floor(jbRandom * 3)] + '<c>' + '”' + '</c>');    //3은 배열 갯수             
+            var index = Math.floor(jbRandom * 3);  //3은 배열 갯수 
+            
+            document.write('<a>' + '“' + '</a>' + jbAry[index] + '<c>' + '”' + '</c>');
+            document.write('- <i>' + jbiAry[index] + '</i>');
         </script>
     </div>
     <div class="addthis_inline_share_toolbox"></div>
 </body>
+
 </html>
+
 </html>
