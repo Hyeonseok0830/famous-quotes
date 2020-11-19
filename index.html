@@ -65,22 +65,34 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/SangSangFlowerRoad.woff"
         rel="stylesheet" />
-    <div class="container quote pt-5" onclick="btn()">
-        <img src = "img/left.png" class = "dir" width="50px" height="50px">
+    <div class="container quote pt-5" >
+        <img src = "img/left.png" class = "dir_left" onclick="btn_left()" width="50px" height="50px">
+        
         <script>
-            function btn(){
+            function btn_left(){
                 //var test = document.getElementById("test");
                 var Random = Math.random();            
                 index= Math.floor(Random * 3);  //3은 배열 갯수 
                 console.log("index = "+index)
-            }
-            
+                alert("left");
+            }            
+            function btn_right(){
+                //var test = document.getElementById("test");
+                var Random = Math.random();            
+                index= Math.floor(Random * 3);  //3은 배열 갯수 
+                console.log("index = "+index)
+                alert("right");
+            }            
             var jbRandom = Math.random();
             var index = Math.floor(jbRandom * 3);  //3은 배열 갯수 
             
-            document.write('<a>' + '“' + '</a>' + jbAry[index] + '<c>' + '”' + '</c>');
-            document.write('- <i>' + jbiAry[index] + '</i>');
+            //'<a>' + '“' + '</a>' + jbAry[index] + '<c>' + ” '</c>'
+            //- <i> + jbiAry[index] + </i> 
+             document.write('<a>' + '“' + '</a>' + jbAry[index] + '<c>' + '”' + '</c>');
+             document.write('- <i>' + jbiAry[index] + '</i>');
+             
         </script>
+        <img src = "img/right.png" class = "dir_right" onclick="btn_right()" width="50px" height="50px">
     </div>
     <div class="addthis_inline_share_toolbox"></div>
 </body>
